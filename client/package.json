@@ -4,8 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "webpack --mode development",
-    "build": "webpack --mode production"
+    "lint": "eslint --ext .js *.js --ext .js **/**.js --ext .js **/**/**.js",
+    "fix": "npm run lint -- --fix",
+    "start": "npm run fix && webpack --mode development",
+    "build": "npm run fix && webpack --mode production"
   },
   "author": "",
   "license": "ISC",
@@ -13,8 +15,11 @@
     "@babel/core": "^7.1.5",
     "@babel/preset-env": "^7.1.5",
     "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "css-loader": "^1.0.1",
+    "eslint": "^5.9.0",
+    "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.25.1",

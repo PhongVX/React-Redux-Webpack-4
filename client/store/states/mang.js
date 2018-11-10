@@ -1,2 +1,2 @@
-var mang=["IOS","ANDROID","NODEJS"];
+var mang=['IOS','ANDROID','NODEJS'];
 module.exports=mang;
